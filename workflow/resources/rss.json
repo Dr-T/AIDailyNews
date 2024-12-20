@@ -1,14 +1,26 @@
 {
     "configuration": {
+        // rsshub domain，当使用自定义 rsshub_path 时会自动拼接这个值
         "rsshub_domain": "https://rsshub.zhangferry.com/"
     },
     "categories": [
         {
+            // rss分组，同时对应网页二级标题
             "category": "🍎 iOS Blog",
+            // rss内容
             "items": [
                 {
+                    // rss 标题，仅用做备注
                     "title": "Swift.org",
+                    // rss 地址
                     "url": "https://www.swift.org/atom.xml",
+                    // rss 内容获取方式。link：会从关联原始链接获取，code：会通过github api 获取对应仓库readme文件。不带该字段提取 rss 原始信息
+                    // "type": "link",
+                    // 该链接最大输出内容数量，默认为 2
+                    // "output_count": 3,
+                    // 会跟 `configuration.rsshub_domain` 进行拼接
+                    // "rsshub_path": "github/trending/daily/swift",
+                    // 是否提取 rss 中的图片，仅从原始 rss 信息获取
                     "image_enable": true
                 },
                 {
